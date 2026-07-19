@@ -1,0 +1,102 @@
+:root {
+    --btn-bg-color: black; 
+    --btn-text-color: white; 
+    --btn-hover-color: #444; 
+    --title-color: #222; 
+    --text-color: #666;
+    --body-bg-color: white; 
+    --font: "Ubuntu"; 
+    --transition-speed: 0.3s;
+    --border-radius: 20px; 
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("src/fonts/Ubuntu/Ubuntu-Regular.ttf");
+}
+
+body{
+    margin: 0; 
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--body-bg-color);
+    font-family: var(--font);
+}
+
+header {
+    display: flex;
+    
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.icon {
+    width: 80px;
+}
+
+.button-container {
+    margin-left: auto;
+    margin-right: 2vw;
+    display: flex;
+    gap: 12px;
+}
+
+.header-btn {
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color var(--transition-speed) ease;
+}
+
+.header-btn:hover {
+    color: var(--btn-hover-color);
+}
+
+.container {
+    line-height: 1.5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content:center;
+    gap: 20px;
+    flex: 1;
+}
+
+footer {
+    display: flex;
+    align-self: center;
+}
+
+.title {
+    letter-spacing: -1px;
+    color: var(--title-color);
+}
+
+.description {
+    line-height: 0.5;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.btn {
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.btn:hover {
+    background-color: var(--btn-hover-color);
+}
