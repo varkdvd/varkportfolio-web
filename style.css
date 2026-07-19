@@ -53,6 +53,20 @@ header {
     color: var(--btn-hover-color);
 }
 
+.header-logo {
+    width: 256px;
+    height: 256px;
+    border-radius: 20px;
+}
+
+.header-about-logo {
+    width: 256px;
+    height: 256px;
+    margin: auto;
+
+    border-radius: 20px;
+}
+
 .container {
     line-height: 1.5;
 
@@ -63,6 +77,43 @@ header {
     justify-content:center;
     gap: 20px;
     flex: 1;
+}
+
+.about-container {
+    line-height: 1.5;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    gap: 20px;
+    flex: 1;
+}
+
+.card {
+    height: 28vh;
+    margin: auto;
+
+    background-color: #ffffff99;
+    border-radius: 20px;
+    padding: 12px;
+
+    transition: background-color var(--transition-speed) ease;
+}
+
+.card-large {
+    flex: 2;
+}
+
+.card-small {
+    flex: 1;
+}
+
+.card:hover {
+    background-color: #cecece99;
 }
 
 footer {
@@ -99,4 +150,33 @@ footer {
 
 .btn:hover {
     background-color: var(--btn-hover-color);
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        padding: 10px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        flex: none;
+        margin: 0;
+        gap: 15px;
+    }
+
+    .card {
+        height: auto;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: #dff0ff;
+    }
+
+    .description {
+        line-height: 1.4;
+    }
 }
